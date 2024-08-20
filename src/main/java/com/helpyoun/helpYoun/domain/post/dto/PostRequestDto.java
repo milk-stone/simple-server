@@ -10,5 +10,5 @@ public class PostRequestDto {
 
     private String body;
 
-    private Boolean published;
+    private Boolean publish;
 }

@@ -24,26 +24,26 @@ public class Post extends BaseEntity {
 
     private String body;
 
-    private Boolean published;
+    private Boolean publish;
 
     public static Post toEntity(PostRequestDto postRequestDto){
         return Post.builder()
                 .title(postRequestDto.getTitle())
                 .body(postRequestDto.getBody())
-                .published(postRequestDto.getPublished())
+                .publish(postRequestDto.getPublish())
                 .build();
     }
 
     public void update(PostUpdateDto postUpdateDto){
         this.title = postUpdateDto.getTitle();
         this.body = postUpdateDto.getBody();
-        this.published = postUpdateDto.getPublished();
+        this.publish = postUpdateDto.getPublish();
     }
 
     @Builder
-    public Post(String title, String body, Boolean published) {
+    public Post(String title, String body, Boolean publish) {
         this.title = title;
         this.body = body;
-        this.published = published;
+        this.publish = publish;
     }
 }

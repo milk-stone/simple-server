@@ -11,18 +11,21 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class PostResponseDto {
+    private Long id;
+
     private String title;
 
     private String body;
 
-    private Boolean published;
+    private Boolean publish;
 
     private LocalDateTime createdAt;
 
     public PostResponseDto(Post post) {
+        this.id = post.getId();
         this.title = post.getTitle();
         this.body = post.getBody();
-        this.published = post.getPublished();
+        this.publish = post.getPublish();
         this.createdAt = post.getCreatedAt();
     }
 }
