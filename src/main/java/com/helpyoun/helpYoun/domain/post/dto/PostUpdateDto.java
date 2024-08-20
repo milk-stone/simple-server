@@ -10,5 +10,5 @@ public class PostUpdateDto {
 
     private String body;
 
-    private Boolean published;
+    private Boolean publish;
 }
