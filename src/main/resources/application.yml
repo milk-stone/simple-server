@@ -12,25 +12,20 @@ spring:
       enabled: true
       max-file-size: 15MB
       max-request-size: 15MB
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/react_basic?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
-    username: admin
-    password: zzknu123!
-    hikari:
-      max-lifetime: 170000
-  logging:
-    level:
-      org.hibernate.SQL: DEBUG
-      org.hibernate.type: TRACE
-  server:
-    servlet:
-      encoding:
-        charset: UTF-8
-        enabled: true
-        force: true
-    tomcat:
-      max-http-form-post-size: 15MB
+  config:
+    additional-location: classpath:application-secret.yml
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: TRACE
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  tomcat:
+    max-http-form-post-size: 15MB
 
 # ---------- <h2 Database 관련> ----------
 
